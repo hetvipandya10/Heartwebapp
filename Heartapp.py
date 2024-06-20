@@ -17,7 +17,7 @@ NumberOfVesselsfluro=st.slider("select NumberOfVesselsfluro=",0,3)
 Thallium=st.slider("select Thallium=",3,7)
 
 import pickle
-model=pickle.load(open("heart.pkl","rb"))
+model=pickle.load(open("Heart.pkl","rb"))
 if st.button("Predict"):
     prd=model.predict([[Age,sex,ChestPainType,BP,Cholesterol,FBSover120,EKGresults,MaxHR,ExerciseAngina,STdepression,SlopeOfSt,NumberOfVesselsfluro,Thallium]])
     st.success("The heart is "+ prd[0])
